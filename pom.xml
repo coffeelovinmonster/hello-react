@@ -8,6 +8,12 @@
   
   <name>hello-react Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>18</maven.compiler.source>
+    <maven.compiler.target>18</maven.compiler.target>
+  </properties>
   
   <dependencies>
     <dependency>
@@ -18,6 +24,24 @@
     </dependency>
   </dependencies>
   <build>
+
+    <pluginManagement>
+      <plugins>
+
+        <!-- Apparently fail should be false by default for > v3 -->
+        <!-- Adding this fixed the 'unable to provision error', why? -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.3.2</version>
+          <configuration>
+            <warSourceDirectory>src/main/webapp/dist</warSourceDirectory>
+            <failOnMissingWebXml>false</failOnMissingWebXml>
+          </configuration>
+        </plugin>
+
+      </plugins>
+    </pluginManagement>
 
     <plugins>
 

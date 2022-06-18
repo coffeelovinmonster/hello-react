@@ -1,2 +1,4 @@
 target/
 src/main/webapp/node_modules
+src/main/webapp/.storybook
+src/main/webapp/src/stories
