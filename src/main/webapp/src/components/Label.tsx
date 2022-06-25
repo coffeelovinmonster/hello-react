@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'
+import { InputLabel as MuiLabel } from '@material-ui/core';
 
 interface LabelProps {
     title:String
@@ -7,6 +8,6 @@ interface LabelProps {
 
 export function Label(props:LabelProps) {
     return (
-        <label style={{width:"50px", height:"20px"}}>{props.title}</label>
+        <MuiLabel>{props.title}</MuiLabel>
     );
-}
+} 

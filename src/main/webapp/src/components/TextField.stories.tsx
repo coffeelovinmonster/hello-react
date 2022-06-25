@@ -1,12 +1,12 @@
 import React from 'react';
-import {TextField} from './TextField'
+import { MyTextField } from './MyTextField'
 
 export default {
-    component: TextField,
+    component: MyTextField,
     title:"Generic Components",
 }
 
-const Template = (args: String) => <TextField/>
+const Template = (args: String) => <MyTextField/>
 
 export const textField = Template.bind({});
 
