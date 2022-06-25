@@ -1,12 +1,18 @@
-import _ from 'lodash';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'mike'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+function Component() {
+  return (
+    <div className="myDiv">
+      <p>Hello Mike</p>
+    </div>
+  );
+}
+
+root.render(
+  <Component />
+);

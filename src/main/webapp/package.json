@@ -5,15 +5,19 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-webapp": "webpack",
+    "build-webapp": "webpack --mode development",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "start": "react-scripts start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -34,6 +38,19 @@
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
     "typescript": "^4.7.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
