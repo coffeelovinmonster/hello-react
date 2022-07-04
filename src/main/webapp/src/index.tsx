@@ -4,6 +4,7 @@ import { Label } from './components/Label';
 import { MyTextField } from './components/MyTextField';
 import { MyButton } from './components/MyButton';
 import { Grid } from '@material-ui/core';
+import { Container } from '@material-ui/core'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,26 +12,29 @@ const root = ReactDOM.createRoot(
 
 function Component() { 
   return (
-    <div className="mapDiv" style={{width:"800px",  height:"600px"}}>
-      <form>
+    <div className="formDiv">
+      <Container className='formContainer' maxWidth='xs'>
         <Grid container spacing={1}>
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <Label title={"This is a label"} />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12}>
-            <MyTextField />
+            <MyTextField labelTxt="Username"/>
           </Grid>
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <Label title={"This is another label"} />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12}>
-            <MyTextField />
+            <MyTextField labelTxt="Password"/>
           </Grid>
           <Grid item xs={12}>
             <MyButton btnText="This is a button" />
           </Grid>
         </Grid>
-      </form>
+      </Container>
+      <Container>
+        
+      </Container>
     </div>
   );
 }
